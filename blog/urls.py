@@ -1,5 +1,4 @@
-from .import views
-from django.urls import path
+
 
 #urlpatterns = [
     #path('', views.PostList.as_view(), name='home'),
@@ -7,7 +6,15 @@ from django.urls import path
 #]
 
 
+#urlpatterns = [
+    #path('', views.EventsList.as_view(), name='home'),
+    #path("", views.event_detail, name="event_detail") ]
+
+from . import views
+from django.urls import path
+
 urlpatterns = [
     path('', views.EventsList.as_view(), name='home'),
-    path("", views.event_detail, name="event_detail") 
+    path("<int:event_id>/", views.event_detail,
+         name="event_detail") 
 ]
