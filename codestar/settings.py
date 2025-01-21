@@ -32,7 +32,7 @@ CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-nielmc-django-blog-tbkovgv7j0.us2.codeanyapp.com', '.herokuapp.com']
+    'localhost', '.herokuapp.com']
 
 
 # Application definition

@@ -1,10 +1,10 @@
 
 from django.contrib import admin
-from .models import About, CollaborateRequest
+from .models import About_me, CollaborateRequest_me
 from django_summernote.admin import SummernoteModelAdmin
 
 
-@admin.register(About)
+@admin.register(About_me)
 
 class AboutAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
@@ -16,7 +16,7 @@ class AboutAdmin(SummernoteModelAdmin):
 #       own projects, then inherit from admin.ModelAdmin like
 #       we do below.
 
-@admin.register(CollaborateRequest)
+@admin.register(CollaborateRequest_me)
 class CollaborateRequestAdmin(admin.ModelAdmin):
 
     list_display = ('message', 'read',)

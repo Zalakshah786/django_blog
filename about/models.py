@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class About(models.Model):
+class About_me(models.Model):
     title = models.CharField(max_length=200)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
@@ -12,7 +12,7 @@ class About(models.Model):
         return self.title
 
 
-class CollaborateRequest(models.Model):
+class CollaborateRequest_me(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField()
     message = models.TextField()
